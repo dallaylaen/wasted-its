@@ -43,7 +43,7 @@ use Cwd qw(abs_path);
 use Resource::Silo -class;
 
 resource config_file =>
-    literal => '/etc/its-wasted/wasted.conf';
+    literal => '/etc/its-wasted/wasted.cfg';
 
 resource root =>
     literal => '/var/lib/its-wasted';
