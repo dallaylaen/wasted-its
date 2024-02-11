@@ -127,7 +127,6 @@ override both config file and root.
 
 sub setup_local {
     my ($self, $config) = @_;
-    warn $config;
 
     $self->ctl->override( config_file => $config );
     $self->ctl->override( root => abs_path( dirname( $config )) );
@@ -142,7 +141,6 @@ return a PSGI app subroutine.
 =cut
 
 sub run {
-    warn "cmdline: @_";
     silo->setup_local( @_ )
         if @_;
 
